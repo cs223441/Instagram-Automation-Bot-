@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+  <div class="container-fluid">
+        <div class="container" id="form_dv">
+            <form action="" for="" method="post" class="container" id="form_body">
+                <h3>Sign up</h3>
+                <input type="text" placeholder="Username" name="User_name">
+                <br>
+                <input type="email" placeholder="Email"  name="User_email">
+                <br>
+                <input type="tel" placeholder="Mobile"   name="User_mobile">
+                <br>
+                <input type="password" placeholder="Password" name="User_password">
+                <br>
+                <input type="password" placeholder="Confirm password" name="User_confirm_password">
+                <br>
+                <p id="memb">Already a member?<a rel="stylesheet" href="Signin.html"> Sign in</a></p>
+                <button type="submit" id="sub_btn"><a href="Index.html">Submit</a></button>
+                <p id="more_op">OR</p>
+                <br>
+                <button type="submit" id="sub_btn">Continue with<i class="fa-brands fa-google" style="color: #363062; background-color:transparent;width:max-content;height:max-content; margin-left:1rem;"></i></button>
+                <button type="submit" id="sub_btn">Continue with<i class="fa-brands fa-facebook" style="color: #363062; background-color:transparent;width:max-content;height:max-content;margin-left:1rem;"></i></button>
+            </form>
+        </div>
+  </div>
+
+
+ <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fahkwang:ital,wght@0,200;0,300;1,400;1,700&family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aladin&family=Fahkwang:ital,wght@0,200;0,300;1,400;1,700&family=Lobster&display=swap');
+*{
+        
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-width: fit-content;
+
+}
+#memb{
+    text-align: center;
+    background-color: transparent;
+    color: #BEADFA;
+}
+#memb a{
+    text-align: center;
+    background-color: transparent;
+    text-decoration:none;
+    color: white;
+    font-weight: bold;
+}
+#form_dv{
+    background-color: #C3ACD0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#form_dv form{
+    border-radius: 1rem;
+    height: auto;
+    width:30%;
+    background-image: radial-gradient(#610C9F,#4E31AA);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#form_dv form h3{
+    text-align: center;
+    margin-bottom: 2rem;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    font-size:2rem;
+}
+
+#form_dv form input{
+caret-color:rgb(255, 255, 255);
+font-family: aladin;
+font-size:1.2rem;
+color: white;
+width: 100%;
+outline: 0;
+margin-bottom: .5rem;
+background:transparent;
+border-top: none;border-left: none; border-right: none; border-bottom:.1rem white solid;  
+}
+
+::selection{
+    background-color: #512B81;
+}
+#form_dv input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active{
+    transition: background-color 5000000s;
+    -webkit-text-fill-color:  #fffcf9;
+    color: #fffcf9;
+    font-family: aladin;
+    
+}
+
+#form_dv form input::placeholder{
+    transition: all .2s ease-in-out;
+    text-wrap:pretty;
+    color: #E5D4FF;
+}
+
+#form_dv form input:hover::placeholder{
+    transform:translateY(-.2rem);
+    font-size: smaller;
+    opacity: .6;
+}
+
+#sub_btn{
+    text-align: center;
+    text-decoration: none;
+    background: transparent;
+    width: 100%;
+    font-family:aladin;
+    font-size: 1.4rem;
+    font-weight:bold;
+    margin-top:1rem;
+    height: 3rem;
+    border:none;
+    border-radius: 2rem;
+    transition: all 0s ease-in-out;
+    background-color: rgb(255, 255, 255);
+}
+@media(max-width:202.40px){
+    #sub_btn{
+        height: 4.5rem;
+        width:110%;
+        text-wrap: wrap;
+            }
+    }
+    
+#sub_btn a{
+    text-decoration: none;
+    background-color:transparent;
+    color:black
+}
+#form_dv button:active{
+    background-color:#7743DB;
+    border: 1px white solid;
+    color: white;
+}
+
+#form_dv button:hover{
+    border: 2px #7743DB solid;
+}
+#more_op{
+    margin-top: 2rem;
+    background-color: transparent;
+    font-family: monospace;
+    font-weight: 2rem;
+    font-size: 1rem;
+    border-top: 1px white solid; border-bottom: 1px white solid;
+    color: rgb(255, 255, 255);
+}
+
+</style>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mainfile</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</head>
+<body>
+  <div class="table table-dark">
+        <div class="container" id="form_dv">
+            <form action="connect.php" method="POST" id="form_body">
+                <h3>Fill details</h3>
+                <input type="text" placeholder="Username" name="user_name" id="username">
+                <br>
+                <input type="password" placeholder="Password" name="user_pass" id="password">
+                <button type="submit" id="sub_btn" onclick="add()">OK</button>
+            </form>
+            <table class="table table-dark" id="table_dv">
+                <thead id="table_head">
+                  <tr>
+                    <th scope="col"style="border-right: 2px white solid; border-bottom:2px white solid">No</th>
+                    <th scope="col"style="border-right: 2px white solid; border-bottom:2px white solid">username</th>
+                    <th scope="col"style="border-right: 2px white solid; border-bottom:2px white solid">password</th>
+                  </tr>
+                </thead>
+                <tbody id="table_body">
+                  <tr>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+  </div>
+ <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fahkwang:ital,wght@0,200;0,300;1,400;1,700&family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aladin&family=Fahkwang:ital,wght@0,200;0,300;1,400;1,700&family=Lobster&display=swap');
+*{
+    background-color: #C4B6B6;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-width: fit-content;
+}
+
+#table_dv{
+    position: relative;
+    top:5rem;
+    left:15rem;
+    width: 45%;
+}
+
+#table_head tr th{
+    border-right: 1px white;
+}
+#memb{
+    margin-top:1rem;
+    background-color: transparent;
+    color: #BEADFA;
+}
+#memb a{
+    background-color: transparent;
+    text-decoration:none;
+    color: white;
+    font-weight: bold;
+}
+
+#frgt{
+    text-decoration: none;
+    background:none;
+    color:#F9F9F9;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+#frgt_p{
+    margin-top: 1rem;
+    background-color: transparent;
+}
+
+#form_dv{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#form_dv form{
+    border-radius: 1rem;
+    height: auto;
+    width:30%;
+  /*  background-image: radial-gradient(#443C68,#4E31AA);
+  */  
+  background-image: radial-gradient(#610C9F,#4E31AA);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#form_dv form h3{
+    margin-bottom: 2rem;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    font-size:2rem;
+}
+
+#form_dv form input{
+caret-color:rgb(255, 255, 255);
+font-family: aladin;
+font-size:1.2rem;
+color: white;
+width: 100%;
+outline: 0;
+margin-bottom: .5rem;
+background:transparent;
+border-top: none;border-left: none; border-right: none; border-bottom:.1rem white solid;  
+}
+
+::selection{
+    background-color: #512B81;
+}
+#form_dv input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active{
+    transition: background-color 5000000s;
+    -webkit-text-fill-color:  #fffcf9;
+    color: #fffcf9;
+    font-family: aladin;
+    
+}
+
+#form_dv form input::placeholder{
+    transition: all .2s ease-in-out;
+    text-wrap:pretty;
+    color: #E5D4FF;
+}
+
+#form_dv form input:hover::placeholder{
+    transform:translateY(-.2rem);
+    font-size: smaller;
+    opacity: .6;
+}
+
+#form_dv button{
+    width: 100%;
+    font-family:aladin;
+    font-size: 1.4rem;
+    font-weight:bold;
+    margin-top:1rem;
+    height: 3rem;
+    border:none;
+    border-radius: 2rem;
+    transition: all 0s ease-in-out;
+    background-color: rgb(255, 255, 255);
+    color:#4E31AA;
+}
+#form_dv button:active{
+    background-color:#7743DB;
+    border: 1px white solid;
+    color: white;
+}
+
+#form_dv button:hover{
+    border: 2px #7743DB solid;
+}
+#more_op{
+    background-color: transparent;
+    font-family: monospace;
+    font-weight: 2rem;
+    font-size: 1rem;
+    border-top: 1px white solid; border-bottom: 1px white solid;
+    color: rgb(255, 255, 255);
+}
+
+</style>
+
+<script>
+    
+    var n=document.getElementById('username').value;
+    var p=document.getElementById('password').value;
+    var ad=0;
+
+    function add(){
+        var n=document.getElementById('username').value;
+        var p=document.getElementById('password').value;
+        if(n=="" || p==""){
+            alert("Empty field!"); 
+            clearFormFields();}
+        else{ad+=1;}
+        var table =`<tr>
+                        <td>${ad}</td>
+                        <td>${n}</td>
+                        <td>${p}</td>
+                        </tr>`
+    
+    
+                    document.getElementById('table_body').innerHTML+=table;
+        var current=window.location.port;
+        console.log(current);
+    } 
+   
+    document.getElementById("form_body").addEventListener("submit", function(event) {
+        event.preventDefault();
+        // Your form submission logic here
+
+clearFormFields();
+
+function clearFormFields() {
+    // Reset the form to clear all fields
+    document.getElementById("form_body").reset();
+}
+});
+
+    </script>
+
+    
+</body>
+</html>
